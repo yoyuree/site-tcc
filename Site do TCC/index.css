@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --azul: #d0a330;
+    --azul-escuro: #1a4f88;
+    --azul-claro: #101b2a;
+    --madeira: #d4af37;
+    --texto: #e6eaf0;
+    --branco: #f5f5f5;
+    --fundo: #080a0f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabecalho {
+    position: fixed;
+
+    align-items: center;
+    background: var(--fundo);
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 40%;
+}
+
+.logo {
+    color: var(--azul);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.logo span {
+    color: var(--madeira);
+}
+
+.logo small {
+    display: block;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    margin-top: 5px;
+}
+
+.menu {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a:not(.botao) {
+    font-size: 0.9rem;
+}
+
+.menu a:not(.botao):hover {
+    color: var(--madeira);
+}
+
+.menu a[aria-current="page"]:not(.botao) {
+    color: var(--madeira);
+}
+
+.botao {
+    align-items: center;
+    background: var(--azul);
+    border: 0;
+    border-radius: 4px;
+    color: var(--branco);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    gap: 12px;
+    justify-content: center;
+    padding: 13px 20px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+    background: var(--azul-escuro);
+    transform: translateY(-2px);
+}
+
+.botao span {
+    font-size: 1.2rem;
+}
+
+.botao-menu {
+    padding: 10px 15px;
+}
+
+.menu-botao {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-botao span {
+    background: var(--azul);
+    display: block;
+    height: 2px;
+    margin: 5px;
+    width: 24px;
+}
+
+.hero {
+    align-items: center;
+    background: var(--azul-claro);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 530px;
+    overflow: hidden;
+    padding: 70px 8%;
+    position: relative;
+}
+
+.hero-conteudo {
+    max-width: 520px;
+    padding: 25px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.etiqueta {
+    color: var(--madeira);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    margin-bottom: 14px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--madeira);
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: var(--azul);
+}
+
+.hero-texto {
+    margin-bottom: 28px;
+    max-width: 410px;
+}
+
+.hero-imagem {
+    align-self: stretch;
+    background:
+        linear-gradient(90deg, rgba(212, 175, 55, 0.08), rgba(40, 116, 200, 0.18)),
+        linear-gradient(140deg, #d0a330 0%, #d0a330 48%, #d0a330 100%);
+    border-radius: 48% 0 0 48%;
+    margin: -70px -18% -70px 0;
+    min-height: 400px;
+}
+
+.hero-selo {
+    background: var(--fundo);
+    border-radius: 50%;
+    bottom: 45px;
+    color: var(--azul);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 0.9rem;
+    height: 115px;
+    line-height: 1.05;
+    padding-top: 36px;
+    position: absolute;
+    right: 43%;
+    text-align: center;
+    width: 115px;
+}
+
+.secao {
+    padding: 90px 8%;
+}
+
+.sobre {
+    align-items: center;
+    display: grid;
+    gap: 12%;
+    grid-template-columns: 1fr 1fr;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.sobre > p {
+    max-width: 500px;
+}
+
+.servicos {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.servicos h2,
+.servicos h3 {
+    color: var(--branco);
+}
+
+.secao-titulo {
+    margin-bottom: 38px;
+}
+
+.servicos-lista {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.servico {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 20px 10px 0 0;
+}
+
+.servico-numero {
+    color: var(--madeira);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+}
+
+.servico h3 {
+    font-size: 1.35rem;
+    margin: 18px 0 10px;
+}
+
+.servico p {
+    color: #e0e6ef;
+    font-size: 0.93rem;
+    max-width: 300px;
+}
+
+.projetos-lista {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projeto {
+    align-items: end;
+    background-color: #172235;
+    background-image: linear-gradient(0deg, rgba(8, 10, 15, 0.84), transparent 70%);
+    border-radius: 5px;
+    display: flex;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 24px;
+    transition: transform 0.2s;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+}
+
+.projeto-cozinha {
+    background-image:
+        linear-gradient(0deg, rgba(8, 10, 15, 0.84), transparent 75%),
+        linear-gradient(135deg, #183d64, #d4af37 55%, #26364c);
+}
+
+.projeto-sala {
+    background-image:
+        linear-gradient(0deg, rgba(8, 10, 15, 0.84), transparent 75%),
+        linear-gradient(135deg, #1d5285, #172235 52%, #d4af37);
+}
+
+.projeto-quarto {
+    background-image:
+        linear-gradient(0deg, rgba(8, 10, 15, 0.84), transparent 75%),
+        linear-gradient(135deg, #203b5a, #d4af37 52%, #14253a);
+}
+
+.projeto div {
+    color: var(--branco);
+}
+
+.projeto span {
+    font-size: 0.8rem;
+}
+
+.projeto h2,
+.projeto h3 {
+    color: var(--branco);
+    font-size: 1.35rem;
+    margin-top: 4px;
+}
+
+.contato {
+    background: var(--azul-claro);
+    display: grid;
+    gap: 12%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contato-texto > p:last-child {
+    margin-top: 18px;
+    max-width: 350px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    color: var(--madeira);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.formulario input,
+.formulario textarea {
+    background: #111822;
+    border: 1px solid #344256;
+    border-radius: 4px;
+    color: var(--texto);
+    font: inherit;
+    margin-bottom: 16px;
+    padding: 12px;
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--azul);
+    outline: 2px solid rgba(40, 116, 200, 0.25);
+}
+
+.formulario .botao {
+    align-self: flex-start;
+}
+
+.form-status {
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+.rodape {
+    align-items: center;
+    background: #05070b;
+    color: #e0e6ef;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 28px 8%;
+}
+
+.logo-rodape {
+    color: var(--branco);
+}
+
+.rodape p {
+    font-size: 0.82rem;
+}
+
+.voltar-inicio {
+    bottom: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    position: fixed;
+    right: 24px;
+    z-index: 5;
+}
+
+@media (max-width: 760px) {
+    .cabecalho {
+        padding: 16px 6%;
+    }
+
+    .menu-botao {
+        display: block;
+        position: relative;
+        z-index: 3;
+    }
+
+    .menu {
+        align-items: stretch;
+        background: var(--fundo);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        left: 0;
+        padding: 25px 6%;
+        position: absolute;
+        right: 0;
+        top: 72px;
+        z-index: 2;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .botao-menu {
+        align-self: flex-start;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 55px 7%;
+    }
+
+    .hero-imagem {
+        border-radius: 8px;
+        margin: 25px 0 0;
+        min-height: 250px;
+    }
+
+    .hero-selo {
+        bottom: 35px;
+        right: 9%;
+    }
+
+    .secao {
+        padding: 65px 7%;
+    }
+
+    .sobre,
+    .contato {
+        gap: 25px;
+        grid-template-columns: 1fr;
+    }
+
+    .servicos-lista,
+    .projetos-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .servico {
+        padding-bottom: 15px;
+    }
+
+    .projeto {
+        min-height: 250px;
+    }
+
+    .rodape {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 28px 7%;
+    }
+
+    .voltar-inicio {
+        bottom: 16px;
+        right: 16px;
+    }
+}
